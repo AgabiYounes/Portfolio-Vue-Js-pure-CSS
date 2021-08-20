@@ -1,0 +1,926 @@
+<!-- 
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#  2021. Younes AGABI, Algiers University                                      +
+#  Email:  younes.agabi03@gmail.com                                            +
+#  You can use this software for non-commercial/commercial purpose.            +
+#  You may use this software without any restriction.                          +
+#  You may change the source code.                                             +          
+#  This Template was made With ❤️ by Younes AGABI.                              +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!--==================== UNICONS ====================-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Younes's Portfolio</title>
+</head>
+
+<body>
+
+    <!--==================== HEADER ====================-->
+
+    <header class="header" id="header" :class="{scroll__header: scrollPosition >= 80}">
+
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Younes AGABI</a>
+            <div class="nav__menu" id="nav-menu" :class="{ show__menu: showMenu }">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link" @click="showMenu=false"><i class="fas fa-home nav__icon"></i> Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link" @click="showMenu=false"><i class="fas fa-id-card nav__icon"></i> About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link" @click="showMenu=false"> <i class="fas fa-head-side-virus nav__icon"></i> Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#qualification" class="nav__link" @click="showMenu=false"><i class="fas fa-briefcase nav__icon"></i> Experience</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link" @click="showMenu=false"><i class="fas fa-images nav__icon"></i> Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link" @click="showMenu=false"><i class=" fas fa-envelope nav__icon "></i> Contact</a>
+                    </li>
+                </ul>
+                <button class="nav__close " id="nav-close " @click="showMenu=! showMenu ">
+                    <i class="fas fa-times "></i>
+                    </button>
+            </div>
+            <div class="nav__btns ">
+                <div>
+                    <button class="nav__toggle " id="nav-toggle " @click="showMenu=! showMenu " v-show="!showMenu ">
+                        <i class="fas fa-bars "></i>
+                    </button>
+
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main ">
+        <!--==================== HOME ====================-->
+        <section class="home section " id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/younes-agabi/" class="home__social-icon" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/AgabiYounes" class="home__social-icon" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/younes_agabi/" class="home__social-icon" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="home__img">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="home__blob">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                            <image class="home__blob-img" x="20" y="-10" xlink:href="assets/img/younes.png" />
+                        </g>
+
+                        </svg>
+                    </div>
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Hi, I'm Younes AGABI
+                        </h1>
+                        <h3 class="home__subtitle">
+                            I'm a Front-End Developer
+                        </h3>
+                        <p class="home__description">
+                            Because downloading and using ready-made templates is quite a boring procedure 😒, I decided to code my portfolio from Scratch using Vue.js CLI and pure CSS 😎 using flex and grid system for a responsive design and an SPA web app.
+                        </p>
+                        <a href="#contact" class="button button--flex">
+                            Contact me <i class="far fa-paper-plane button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="fas fa-mouse home__scroll-mouse"></i>
+                        <span class="home__scroll-name"> Scroll  down</span>
+                        <i class="fas fa-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section " id="about">
+            <h2 class="section__title">
+                About Me
+            </h2>
+            <span class="section__subtitle">
+            My introduction
+            </span>
+            <div class="about__container container grid">
+                <img src="assets/img/about.jpg" alt="" class="about__img">
+                <div class="about__data">
+                    <p class="about__description">
+                        My name's <strong>Younes AGABI</strong>. I am an <strong>artificial intelligence engineer</strong> and a <strong>front-end developer</strong> with <strong>+3 years</strong> of experience. I did my internship at the University of
+                        Deakin in Australia and i'm interested in UI & UX Web Design trends. I mainly use <strong>Vue js</strong> to realize my web projects as well as some knowledge in <strong>Laravel</strong> for the BackEnd. I like to make fun and
+                        interactive things with code because in the end, there are three possible reactions to any design: yes, no and <strong>WAHOU!</strong>, the third one is the one I'm aiming for.
+                    </p>
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">+3</span>
+                            <span class="about__info-name">Years <br> experience</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">+6</span>
+                            <span class="about__info-name">Completed <br> project</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">2</span>
+                            <span class="about__info-name">Companies <br> worked</span>
+                        </div>
+                    </div>
+                    <div class="about__buttons">
+                        <a href="https://www.canva.com/design/DAEZAM_I9ZM/RbwJy0kEKYsMRNkYbQaT8A/view?utm_content=DAEZAM_I9ZM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class="button button--flex" target="_blank">
+                            Download CV<i class="fas fa-download button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--==================== SKILLS ====================-->
+        <section class="skills section " id="skills">
+            <h2 class="section__title">
+                Skills
+            </h2>
+            <span class="section__subtitle">
+                My Technical skills
+            </span>
+            <div class="skills__container container grid">
+                <div>
+                    <div class="skills__content" :class="[showSkillsFrontEnd ? 'skills__open' : 'skills__close'] ">
+                        <div class="skills__header" @click="showFrontEndSkills">
+                            <i class="fas fa-code skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">
+                                    Frontend Developer
+                                </h1>
+                                <span class="skills__subtitle">
+                                    More than 3 years of experience
+                                </span>
+                            </div>
+                            <i class="fas fa-chevron-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Pure CSS</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__css"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Bootstrap</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__bootstrap"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__javascript"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Vue.js</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__vuejs"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Git</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__git"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__content " :class="[showSkillsBackEnd ? 'skills__open' : 'skills__close']">
+                        <div class="skills__header" @click="showBackEndSkills">
+                            <i class="fas fa-server skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">
+                                    Backend Developer
+                                </h1>
+                                <span class="skills__subtitle">
+                                    More than a year of experience
+                                </span>
+                            </div>
+                            <i class="fas fa-chevron-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Laravel</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__laravel"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">MySQL</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__mysql"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="skills__content" :class="[showSkillsAI ? 'skills__open' : 'skills__close']">
+                        <div class="skills__header" @click="showAISkills">
+                            <i class="fas fa-brain skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">
+                                    AI Engineer
+                                </h1>
+                                <span class="skills__subtitle">
+                                    Master's degree
+                                </span>
+                            </div>
+                            <i class="fas fa-chevron-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Natural Language Processing</h3>
+                                    <span class="skills__number">50%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__nlp"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Python</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__python"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">TensorFlow</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__tensorflow"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!--==================== QUALIFICATION ====================-->
+        <section class="qualification section " id="qualification">
+            <h2 class="section__title">Qualification</h2>
+            <span class="section__subtitle">My personnal journey</span>
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+                    <div class="qualification__button button--flex" @click="showEducationFunction" :class="{ 'qualification__active-button': showEducation }">
+                        <i class="fas fa-graduation-cap qualification__icon"></i> Education
+                    </div>
+                    <div class="qualification__button button--flex" @click="showInternshipFunction" :class="{ 'qualification__active-button': showInternship }">
+                        <i class="fas fa-address-card qualification__icon"></i> Internship
+                    </div>
+                    <div class="qualification__button button--flex" @click="showWorkFunction" :class="{ 'qualification__active-button': showWork }">
+                        <i class="fas fa-briefcase qualification__icon"></i> Work
+                    </div>
+
+
+                </div>
+                <div class="qualification__sections">
+                    <div class="qualification__content " data-content id="education" :class="{ qualification__active: showEducation }">
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Artificial Intelligence Engineer </h3>
+                                <span class="qualification__subtitle">
+                                    Master's degree - University of Algiers, Algeria
+                                </span>
+                                <div class="qualification__calendar">
+                                    <i class="far fa-calendar"></i> 2018 - 2020
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounded">
+                                </span>
+                                <span class="qualification__line">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounded">
+                                </span>
+
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">Computer systems </h3>
+                                <span class="qualification__subtitle">
+                                    Bachelor's degree - University of Algiers, Algeria
+                                </span>
+                                <div class="qualification__calendar">
+                                    <i class="far fa-calendar"></i> 2015 - 2018
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="qualification__content" data-content id="work" :class="{ qualification__active: showWork }">
+                        <div class=" qualification__data ">
+                            <div>
+                                <h3 class="qualification__title ">Frontend Developer </h3>
+                                <span class="qualification__subtitle ">
+                                    ADEX Technology
+                                </span>
+                                <div class="qualification__calendar ">
+                                    <i class="far fa-calendar "></i> 2021 - Present
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification__rounded ">
+                                </span>
+                                <span class="qualification__line ">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data ">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounded ">
+                                </span>
+                                <span class="qualification__line ">
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title ">Techno-functional ERP Consultant</h3>
+                                <span class="qualification__subtitle ">
+                                    Atom Algeria
+                                </span>
+                                <div class="qualification__calendar ">
+                                    <i class="far fa-calendar "></i> 2020 - 2021
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="qualification__data ">
+
+
+                            <div>
+                                <h3 class="qualification__title ">Web Developer</h3>
+                                <span class="qualification__subtitle ">
+                                    Digitalex
+                                </span>
+                                <div class="qualification__calendar ">
+                                    <i class="far fa-calendar "></i> 2017
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification__rounded ">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="qualification__content " data-content id="intership" :class="{ qualification__active: showInternship }">
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">End-Of-Degree Internship </h3>
+                                <span class="qualification__subtitle">
+                                    Master's degree - University of Deakin, Australia
+                                </span>
+                                <div class="qualification__calendar">
+                                    <i class="far fa-calendar"></i> 2020
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounded">
+                                </span>
+                                <span class="qualification__line">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounded">
+                                </span>
+                                <span class="qualification__line">
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">External Internship </h3>
+                                <span class="qualification__subtitle">
+                                     Moudjib Digital
+                                </span>
+                                <div class="qualification__calendar">
+                                    <i class="far fa-calendar"></i> 2019
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="qualification__data">
+
+                            <div>
+                                <h3 class="qualification__title">End-Of-Degree internship </h3>
+                                <span class="qualification__subtitle">
+                                    Bachelor's degree - Algeria Post
+                                </span>
+                                <div class="qualification__calendar">
+                                    <i class="far fa-calendar"></i> 2018
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounded">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!--==================== PORTFOLIO ====================-->
+        <section class="portfolio section " id="portfolio">
+            <h2 class="section__title">
+                Portfolio
+            </h2>
+            <span class="section__subtitle">
+                Most recent work
+            </span>
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/adextechnology.png" alt="" class="portfolio__img">
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">
+                                Modern WebSite
+                            </h3>
+                            <p class="portfolio__description">
+                                A modern website with a responsive design.
+                            </p>
+                            <a href="#" class="button button--flex button--small portfolio__button">Visit <i class="fas fa-arrow-right button__icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/adextraining.png" alt="" class="portfolio__img">
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">
+                                Modern WebSite
+                            </h3>
+                            <p class="portfolio__description">
+                                A modern website with a responsive design.
+                            </p>
+                            <a href="#" class="button button--flex button--small portfolio__button">Visit <i class="fas fa-arrow-right button__icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/idnap.png" alt="" class="portfolio__img">
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">
+                                Modern WebSite
+                            </h3>
+                            <p class="portfolio__description">
+                                A modern website with a responsive design.
+                            </p>
+                            <a href="#" class="button button--flex button--small portfolio__button">Visit <i class="fas fa-arrow-right button__icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next">
+                    <i class="fas fa-chevron-right swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="fas fa-chevron-left swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+
+        <!--==================== PROJECT IN MIND ====================-->
+        <section class="project section ">
+            <div class="project__bg">
+                <div class="project__container container grid">
+                    <div class="project__data">
+                        <h2 class="project__title">
+                            You have a new project!
+                        </h2>
+                        <p class="project__description">
+                            You want to realize a new project and you are looking for a web developer? Realize your dreams by contacting me 😄.
+                        </p>
+                        <a href="#contact" class="button button--flex button--white"> Contact Me <i class="fas fa-paper-plane project__icon button__icon"></i></a>
+                    </div>
+                    <img src="assets/img/younes.png" alt="" class="project__img">
+                </div>
+            </div>
+
+        </section>
+
+        <!--==================== TESTIMONIAL ====================-->
+        <section class="testimonial section ">
+            <h2 class="section__title">
+                Testimonial
+            </h2>
+            <span class="section__subtitle">
+                What my colleagues and superiors say about me
+            </span>
+            <div class="testimonial__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="testimonial__content swiper-slide">
+                        <div class="testimonial__data">
+                            <div class="testimonial__header">
+                                <img src="assets/img/ahmed.jpg" alt="" class="testimonial__img">
+                                <div>
+                                    <h3 class="testimonial__name"> Ahmed Djoudi</h3>
+                                    <span class="testimonial__client">Co-worker</span>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial__description">
+                            I'm very pleased to write down a brief recommendation about YOUNES AGABI. I have worked with Younes at ADEX TECHNOLOGY where I noticed his talent and skills in Frontend Developemnt and Web Design. YOUNES has a very big ambition to learn, evolve and master
+                            new technologies very fast. He is very cooperative with his work team and really helpful in transferring knowledge and experience to them.
+                    </div>
+                    <div class="testimonial__content swiper-slide">
+                        <div class="testimonial__data">
+                            <div class="testimonial__header">
+                                <img src="assets/img/akram.jpg" alt="" class="testimonial__img">
+                                <div>
+                                    <h3 class="testimonial__name"> Akram ARAR</h3>
+                                    <span class="testimonial__client">Co-worker</span>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial__description">
+                            Rayane is a very focus and talented person, his work is fascinating. He consistently seeks out constructive feedback so that he improves his self, both personally and professionally. His qualities as a team member are outstanding, he communicates very
+                            well with other team members and successfully established flourishing relationships with other departments as well. I am certain that Rayane is going to continue to do creative work in his future.
+                    </div>
+                    <div class="testimonial__content swiper-slide">
+                        <div class="testimonial__data">
+                            <div class="testimonial__header">
+                                <img src="assets/img/rayane.jpg" alt="" class="testimonial__img">
+                                <div>
+                                    <h3 class="testimonial__name">Rayan KRIMI</h3>
+                                    <span class="testimonial__client">Co-worker</span>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                                <i class="fas fa-star testimonial__icon-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial__description">
+                            I studied and worked in the same company as Younes for a long time. Younes id always curious and open-minded, he has a real taste for challenges! He is always willing to answer various questions and to think of solutions to the most complex problems.
+                            New responsibilities and management do not scare him: although effective alone, he has a sense of teamwork and knows how to motivate teams when a project is entrusted to him.
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-testimonial"></div>
+            </div>
+
+        </section>
+
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section " id="contact">
+            <h2 class="section__title">
+                Contact Me
+            </h2>
+            <span class="section__subtitle">
+                I'm always available to talk about my work and my projects.
+            </span>
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="fas fa-phone contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">
+                                Phone
+                            </h3>
+                            <span class="contact__subtitle">
+                                +213 (0) 5 40 49 36 44
+                            </span>
+                        </div>
+                    </div>
+                    <div class="contact__information">
+                        <i class="fas fa-envelope  contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">
+                                E-Mail
+                            </h3>
+                            <span class="contact__subtitle">
+                                younes.agabi03@gmail.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="contact__information">
+                        <i class="fas fa-map-marker-alt contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">
+                                Location
+                            </h3>
+                            <span class="contact__subtitle">
+                                Algiers, Algeria
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <form action="" class="contact__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Name</label>
+                            <input type="text" class="contact__input" name="name">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">E-Mail</label>
+                            <input type="email" class="contact__input" name="email">
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Project</label>
+                        <input type="text" class="contact__input" name="project">
+                    </div>
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Message</label>
+                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                    </div>
+                    <div>
+                        <a href="#" class="button button--flex">Send Message <i class="fas fa-paper-plane button__icon"></i></a>
+                    </div>
+                </form>
+            </div>
+
+
+
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Younes</h1>
+                    <span class="footer__subtitle">Frontend Developer</span>
+                </div>
+                <ul class="footer__links">
+
+
+                    <li>
+                        <a href="#skills" class="footer__link">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#qualification" class="footer__link">Qualification</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+                <div class="footer__socials">
+                    <a href="https://github.com/AgabiYounes" class="footer__social" target="_blank"> <i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/younes-agabi/" class="footer__social" target="_blank"> <i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/younes.agabi" class="footer__social" target="_blank"> <i class="fab fa-facebook"></i></a>
+                </div>
+
+            </div>
+
+            <p class="footer__copy"> No rights reserved, you can use it 😁</p>
+        </div>
+    </footer>
+
+    <!--==================== SCROLL TOP ====================-->
+
+    <a href="#" class="scrollup" id="scrollup" :class="{show__scroll: scrollPositionScroll >= 560}">
+        <i class="fas fa-arrow-up scrollup__icon"></i>
+    </a>
+    <!--==================== Vue JS ====================-->
+    <script>
+        new Vue({
+            el: "#header ",
+            data: {
+                showMenu: false,
+                scrollPosition: null
+            },
+            methods: {
+                updateScroll() {
+                    this.scrollPosition = window.scrollY
+                }
+            },
+            mounted() {
+                window.addEventListener('scroll', this.updateScroll);
+            }
+        })
+    </script>
+    <script>
+        new Vue({
+            el: "#skills ",
+            data: {
+                showSkillsFrontEnd: true,
+                showSkillsBackEnd: false,
+                showSkillsAI: false,
+            },
+            methods: {
+                showFrontEndSkills: function() {
+                    this.showSkillsFrontEnd = true;
+                    this.showSkillsBackEnd = false;
+                    this.showSkillsAI = false;
+                },
+                showBackEndSkills: function() {
+                    this.showSkillsFrontEnd = false;
+                    this.showSkillsBackEnd = true;
+                    this.showSkillsAI = false;
+                },
+                showAISkills: function() {
+                    this.showSkillsFrontEnd = false;
+                    this.showSkillsBackEnd = false;
+                    this.showSkillsAI = true;
+                }
+            }
+        })
+    </script>
+    <script>
+        new Vue({
+            el: "#qualification ",
+            data: {
+                showEducation: false,
+                showWork: true,
+                showInternship: false
+            },
+            methods: {
+                showEducationFunction: function() {
+                    this.showEducation = true;
+                    this.showWork = false;
+                    this.showInternship = false;
+                },
+                showWorkFunction: function() {
+                    this.showEducation = false;
+                    this.showWork = true;
+                    this.showInternship = false;
+                },
+                showInternshipFunction: function() {
+                    this.showEducation = false;
+                    this.showWork = false;
+                    this.showInternship = true;
+                }
+
+            }
+        })
+    </script>
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js " integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script>
+        var swiperPortfolio = new Swiper(".portfolio__container", {
+            cssMode: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+        });
+    </script>
+    <script>
+        var swiperTestimonial = new Swiper(".testimonial__container", {
+            loop: true,
+            grabCursor: true,
+            spaceBetween: 48,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            breakpoints: {
+                568: {
+                    slidesPerView: 2,
+                }
+            }
+
+        });
+    </script>
+
+
+    <script>
+        new Vue({
+            el: "#scrollup",
+            data: {
+                scrollPositionScroll: null
+            },
+            methods: {
+                updateScrollScroll() {
+                    this.scrollPositionScroll = window.scrollY
+                }
+            },
+            mounted() {
+                window.addEventListener('scroll', this.updateScrollScroll);
+            }
+        })
+    </script>
+</body>
+
+</html>
