@@ -1,7 +1,7 @@
 # Dark Portfolio
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/AgabiYounes/Dark-Portfolio-Pure-CSS-VueJs-CLI)
 ## Overview
-Because downloading and using ready-made templates is quite a boring procedure 😒, I decided to code my portfolio from Scratch using Vue.js CLI and pure CSS 😎 using flex and grid system for a responsive design and an SPA web app. You can improve it or/and use it freely to create your own portfolio...
+A personal responsive website (Portfolio) made with pure CSS (Flex and Grid system) without CSS Frameworks. This SPA website is based on VueJs Cli. You can use it and improve it without constraints.
 
 ![OverView Screen](overview.png)
 ## Used Packages
