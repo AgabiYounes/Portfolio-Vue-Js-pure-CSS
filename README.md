@@ -1,7 +1,7 @@
 # Dark Portfolio
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/AgabiYounes/Dark-Portfolio-Pure-CSS-VueJs-CLI)
 ## Overview
-A personal responsive website (Portfolio) made with pure CSS (Flex and Grid system) without CSS Frameworks. This SPA website is based on VueJs Cli. You can use it and improve it without constraints.
+A personal responsive website (Portfolio) made with pure CSS (Flex and Grid system) without CSS Frameworks. This SPA website is based on VueJs Cli and EmailJs for sending emails. You can use it and improve it without constraints.
 
 Credit : Bedimcode
 
