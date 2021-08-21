@@ -3,6 +3,8 @@
 ## Overview
 A personal responsive website (Portfolio) made with pure CSS (Flex and Grid system) without CSS Frameworks. This SPA website is based on VueJs Cli. You can use it and improve it without constraints.
 
+Credit : Bedimcode
+
 ![OverView Screen](overview.png)
 ## Used Packages
 ```
